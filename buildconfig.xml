@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0" capabilities="sbdh">
+
+    <testfolder>test</testfolder>
+
+	<configuration>
+        <identifier>peppol-sbdh</identifier>
+        <title>PEPPOL Standard Business Document Header</title>
+		<standardId>SBDH:1.0</standardId> 
+        <file source="xsd/StandardBusinessDocumentHeader.xsd" path="xsd/StandardBusinessDocumentHeader.xsd" />
+	</configuration>
+
+	<include path="xsd/BasicTypes.xsd" />
+	<include path="xsd/BusinessScope.xsd" />
+	<include path="xsd/DocumentIdentification.xsd" />
+	<include path="xsd/EDIOrder.xsd" />
+	<include path="xsd/EDIOrderProxy.xsd" />
+	<include path="xsd/Manifest.xsd" />
+	<include path="xsd/Order.xsd" />
+	<include path="xsd/OrderProxy.xsd" />
+	<include path="xsd/OrderResponse.xsd" />
+	<include path="xsd/OrderResponseProxy.xsd" />
+	<include path="xsd/Partner.xsd" />
+
+</buildConfigurations>
