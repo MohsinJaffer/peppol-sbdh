@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh-schematron">
+	<assert>
+		<scope>PEPPOL-SBDH-R003</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify existence of business scope.</description>
+			<success>PEPPOL-SBDH-R003</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<StandardBusinessDocumentHeader>
+				<BusinessScope/>
+			</StandardBusinessDocumentHeader>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Verify existence of business scope.</description>
+			<error>PEPPOL-SBDH-R003</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<StandardBusinessDocumentHeader>
+				<!-- <BusinessScope/> -->
+			</StandardBusinessDocumentHeader>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>

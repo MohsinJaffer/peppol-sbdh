@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh-schematron">
+	<assert>
+		<scope>PEPPOL-SBDH-R050</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify identifier is not set for PROCESSID.</description>
+			<success>PEPPOL-SBDH-R050</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<BusinessScope>
+				<Scope>
+					<Type>PROCESSID</Type>
+					<!-- <Identifier/> -->
+				</Scope>
+			</BusinessScope>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Verify identifier is not set for PROCESSID.</description>
+			<error>PEPPOL-SBDH-R050</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<BusinessScope>
+				<Scope>
+					<Type>PROCESSID</Type>
+					<Identifier/>
+				</Scope>
+			</BusinessScope>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh-schematron">
+	<assert>
+		<scope>PEPPOL-SBDH-R041</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify correlation information is not set for DOCUMENTID.</description>
+			<success>PEPPOL-SBDH-R041</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<BusinessScope>
+				<Scope>
+					<Type>DOCUMENTID</Type>
+					<!-- <CorrelationInformation/> -->
+				</Scope>
+			</BusinessScope>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Verify correlation information is not set for DOCUMENTID.</description>
+			<error>PEPPOL-SBDH-R041</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<BusinessScope>
+				<Scope>
+					<Type>DOCUMENTID</Type>
+					<CorrelationInformation/>
+				</Scope>
+			</BusinessScope>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>

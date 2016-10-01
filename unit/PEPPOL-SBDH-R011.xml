@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh-schematron">
+	<assert>
+		<scope>PEPPOL-SBDH-R011</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify sender identifier contains valid authority.</description>
+			<success>PEPPOL-SBDH-R011</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<Sender>
+				<Identifier Authority="iso6523-actorid-upis"/>
+			</Sender>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Verify sender identifier contains valid authority.</description>
+			<error>PEPPOL-SBDH-R011</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<Sender>
+				<Identifier Authority="ido631"/>
+			</Sender>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>

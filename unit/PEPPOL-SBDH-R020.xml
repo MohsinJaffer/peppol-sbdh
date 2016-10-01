@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh-schematron">
+	<assert>
+		<scope>PEPPOL-SBDH-R020</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>No error when multiple type is not set in document identification.</description>
+			<success>PEPPOL-SBDH-R020</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<DocumentIdentification>
+				<!-- <MultipleType/> -->
+			</DocumentIdentification>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when multiple type is set in document identification.</description>
+			<error>PEPPOL-SBDH-R020</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<DocumentIdentification>
+				<MultipleType/>
+			</DocumentIdentification>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>
