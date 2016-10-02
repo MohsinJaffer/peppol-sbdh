@@ -4,7 +4,7 @@
 	<testfolder>test</testfolder>
 	<testfolder>unit</testfolder>
 
-  <configuration>
+	<configuration>
 		<identifier>sbdh-1.0</identifier>
 		<title>PEPPOL Standard Business Document Header (XSD)</title>
 		<file source="xsd/StandardBusinessDocumentHeader.xsd" path="xsd/StandardBusinessDocumentHeader.xsd" />
@@ -14,8 +14,8 @@
 		<identifier>peppol-sbdh</identifier>
 		<title>OpenPEPPOL Business Message Envelope (SBDH) 1.0</title>
 		<standardId>SBDH:1.0</standardId>
-    <inherit>sbdh-1.0</inherit>
-    <file source="sch/PEPPOL-SBDH.sch" path="xsl/PEPPOL-SBDH.xsl" />
+		<inherit>sbdh-1.0</inherit>
+		<file source="sch/PEPPOL-SBDH.sch" path="xsl/PEPPOL-SBDH.xsl" />
 	</configuration>
 
 	<include path="xsd/BasicTypes.xsd" />
