@@ -14,6 +14,9 @@
       <assert id="PEPPOL-SBDH-R003" test="sbdh:BusinessScope" flag="fatal">Business scope is required.</assert>
       <assert id="PEPPOL-SBDH-R004" test="not(sbdh:Manifest)" flag="fatal">Manifest is not allowed.</assert>
     </rule>
+    <rule context="sbdh:Sender | sbdh:Receiver">
+      <assert id="PEPPOL-SBDH-R012" test="not(sbdh:ContactInformation)" flag="fatal">Contact information element is not allowed.</assert>
+    </rule>
     <rule context="sbdh:Sender/sbdh:Identifier | sbdh:Receiver/sbdh:Identifier">
       <assert id="PEPPOL-SBDH-R010" test="not(. = '')" flag="fatal">Identifier can not be empty.</assert>
       <assert id="PEPPOL-SBDH-R011" test="@Authority = 'iso6523-actorid-upis'" flag="fatal">Identifier must have authority set to 'iso6523-actorid-upis'.</assert>

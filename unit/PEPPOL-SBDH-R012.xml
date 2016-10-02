@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="peppol-sbdh">
+	<assert>
+		<scope>PEPPOL-SBDH-R012</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>No error when contact information is not set in document identification.</description>
+			<success>PEPPOL-SBDH-R012</success>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<Sender>
+				<!-- <ContactInformation/> -->
+			</Sender>
+
+		</StandardBusinessDocument>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when contact information is set in document identification.</description>
+			<error>PEPPOL-SBDH-R012</error>
+		</assert>
+		<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+			<Sender>
+				<ContactInformation/>
+			</Sender>
+
+		</StandardBusinessDocument>
+	</test>
+</testSet>
