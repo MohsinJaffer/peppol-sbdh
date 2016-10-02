@@ -5,22 +5,17 @@
 	<testfolder>unit</testfolder>
 
   <configuration>
-		<identifier>sbdh-xsd</identifier>
+		<identifier>sbdh-1.0</identifier>
 		<title>PEPPOL Standard Business Document Header (XSD)</title>
 		<file source="xsd/StandardBusinessDocumentHeader.xsd" path="xsd/StandardBusinessDocumentHeader.xsd" />
-	</configuration>
-	<configuration>
-		<identifier>peppol-sbdh-schematron</identifier>
-		<title>PEPPOL Standard Business Document Header (Schematron)</title>
-    <file source="sch/PEPPOL-SBDH.sch" path="xsl/PEPPOL-SBDH.xsl" />
 	</configuration>
 
 	<configuration>
 		<identifier>peppol-sbdh</identifier>
 		<title>OpenPEPPOL Business Message Envelope (SBDH) 1.0</title>
 		<standardId>SBDH:1.0</standardId>
-    <inherit>sbdh-xsd</inherit>
-    <inherit>peppol-sbdh-schematron</inherit>
+    <inherit>sbdh-1.0</inherit>
+    <file source="sch/PEPPOL-SBDH.sch" path="xsl/PEPPOL-SBDH.xsl" />
 	</configuration>
 
 	<include path="xsd/BasicTypes.xsd" />
